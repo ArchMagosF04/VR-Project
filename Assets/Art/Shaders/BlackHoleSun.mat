@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
-  m_Shader: {fileID: -6465566751694194690, guid: 20f3bb68cb67040409b8adc77f03530c, type: 3}
+  m_Name: BlackHoleSun
+  m_Shader: {fileID: -6465566751694194690, guid: afcd42657d6c78e42b3cc54c8ff71ae0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -38,16 +38,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Absorption_Coefficient: 0.252
+    - _FresnelPower: 2
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _foam_density: 6.5
     m_Colors:
-    - _Absorption_Colour: {r: 0, g: 1, b: 0.9052942, a: 1}
-    - _WaterColour: {r: 0.98490566, g: 1, b: 0.759434, a: 0}
+    - _FresnelColor: {r: 0, g: 6.3755684, b: 10.432951, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &3343150775335172143
+--- !u!114 &5038860526701614196
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
