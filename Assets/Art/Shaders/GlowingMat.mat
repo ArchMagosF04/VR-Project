@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Glowing
+  m_Name: GlowingMat
   m_Shader: {fileID: -6465566751694194690, guid: 52f6714824d83c84ca7155a17f7ded16, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -117,7 +117,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _PulseSpeed: 2
+    - _PulseSpeed: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -131,10 +131,10 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1.4980392, g: 0.9963036, b: 0, a: 1}
+    - _BaseColor: {r: 0.1872549, g: 0.12453795, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 2.9391508, b: 2.9960785, a: 1}
-    - _NeonColor: {r: 1.4980394, g: 0, b: 1.4829899, a: 1}
+    - _EmissionColor: {r: 0, g: 1.5157166, b: 0.917753, a: 1}
+    - _NeonColor: {r: 0.122641504, g: 0, b: 0.118085854, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
