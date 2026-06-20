@@ -15,22 +15,22 @@ EditorBuildSettings:
     path: Assets/Scenes/Test.unity
     guid: e6106d642c4f5954b885218eecb2098d
   - enabled: 1
-    path: Assets/Scenes/Level0.unity
+    path: Assets/Scenes/Level0 - Tutorial - Raven.unity
     guid: a44d501c0cb3e21409b262c897232443
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level1 - Aries.unity
     guid: c9b9fc74687fcd541a83cf0c5083ce73
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/Level2 - Capricorn.unity
     guid: f660c79a904474640860481473e95004
   - enabled: 1
-    path: Assets/Scenes/Level3.unity
+    path: Assets/Scenes/Level3 - Cup.unity
     guid: 83003355e52028f468eb5ca3c6404bbf
   - enabled: 1
-    path: Assets/Scenes/Level4.unity
+    path: Assets/Scenes/Level4 - Orion.unity
     guid: af3e86cc64efde6478989ffd68e0bb62
   - enabled: 1
-    path: Assets/Scenes/Level5.unity
+    path: Assets/Scenes/Level5 - Phoenix.unity
     guid: 5a91523708f30a74faf6c9c588a5552a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

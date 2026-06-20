@@ -10430,7 +10430,7 @@ GameObject:
   - component: {fileID: 1521630888}
   - component: {fileID: 1521630887}
   m_Layer: 5
-  m_Name: ZtarCanvas
+  m_Name: StarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10914,7 +10914,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ztar
+  m_text: Star
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c007133bfc096dc45bd74a75c889f9f4, type: 2}
   m_sharedMaterial: {fileID: -8689982438950148411, guid: c007133bfc096dc45bd74a75c889f9f4, type: 2}
