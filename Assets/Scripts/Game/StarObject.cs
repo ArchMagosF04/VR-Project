@@ -1,7 +1,4 @@
-using Oculus.Interaction;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.MemoryProfiler;
 using UnityEngine;
 
 public class StarObject : MonoBehaviour
