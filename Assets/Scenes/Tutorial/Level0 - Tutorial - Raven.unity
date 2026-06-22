@@ -10309,12 +10309,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Objective:
-
-    - Put the Stars in their place to form the constellation.
-
-    -
-    A star''s color determines how many connections it can have.'
+  m_text: "Welcome to the tutorial of Stars!\n\nObjective:\n\n- Put the Stars in
+    their place to form the Constellation.\n\n- A star's color determines how many
+    connections it can have:\n- <color=red>Red: 1 connection</color>.\n- <color=yellow>Yellow:
+    2 connections</color>.\n- <color=white> White: 3 connections</color>.\n- <color=blue>Blue:
+    4 connections</color>.\n\n- Once they\xB4re in place, poke them to join them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c007133bfc096dc45bd74a75c889f9f4, type: 2}
   m_sharedMaterial: {fileID: -8689982438950148411, guid: c007133bfc096dc45bd74a75c889f9f4, type: 2}
@@ -14307,6 +14306,10 @@ PrefabInstance:
     - target: {fileID: 3818513342518403903, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_Name
       value: BlackHoleSun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222006237887411782, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
+      propertyPath: timeToReach
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6714143818844025839, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalPosition.x
