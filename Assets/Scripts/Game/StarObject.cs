@@ -10,13 +10,18 @@ public class StarObject : MonoBehaviour
 
     public List<StarConnection> connections = new List<StarConnection>();
 
+    [SerializeField,Range(1f, 5f)] private int maxNumberOfConnections;
+
     public void OnStarFirstSelection()
     {
+        Debug.Log("Star Touched");
         GameManager.Instance.SelectStar(this);
     }
 
     public void AddNewConnection(StarConnection newConnection)
     {
+        if (HasMaxConnections()) return;
+
         connections.Add(newConnection);
     }
 
@@ -31,5 +36,11 @@ public class StarObject : MonoBehaviour
 
         AnchorPoint.AnchoredStar = null;
         AnchorPoint = null;
+    }
+
+    public bool HasMaxConnections()
+    {
+        if (connections.Count >= maxNumberOfConnections) return true;
+        else return false;
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -19,6 +20,10 @@ public class GameManager : MonoBehaviour
     public float fullComplete;
 
     public Image progressBar;
+
+    [SerializeField] private ParticleSystem starSelectedParticles;
+
+    [SerializeField] private string nextScene;
 
     private void Awake()
     {
@@ -40,54 +45,44 @@ public class GameManager : MonoBehaviour
         progressBar.fillAmount = completionProgress / fullComplete;
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetMouseButtonDown(1))
-    //    {
-    //        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
-    //        if (hit.collider && hit.collider.TryGetComponent<StarObject>(out StarObject star))
-    //        {
-    //            if (star.AnchorPoint == null) return;
-
-    //            if (SelectedStar == null || SelectedStar == star)
-    //            {
-    //                SelectedStar = star;
-    //                return;
-    //            }
-
-    //            if (ConnectionExist(SelectedStar, star)) return;
-
-    //            LineRenderer newLine = Instantiate(starLanePrefab);
-
-    //            newLine.SetPosition(0, SelectedStar.transform.position);
-    //            newLine.SetPosition(1, star.transform.position);
-
-    //            StarConnection newConnection = new StarConnection(SelectedStar.AnchorPoint, star.AnchorPoint, newLine);
-
-    //            star.AddNewConnection(newConnection);
-    //            SelectedStar.AddNewConnection(newConnection);
-
-    //            CurrentConnections.Add(newConnection);
-
-    //            AssessConnection(newConnection);
-
-    //            SelectedStar = null;
-    //        }
-    //    }
-    //}
-
     public void SelectStar(StarObject star)
     {
-        if (star.AnchorPoint == null) return;
-
-        if (SelectedStar == null || SelectedStar == star)
+        if (star.AnchorPoint == null)
         {
-            SelectedStar = star;
+            Debug.Log("Star has no anchor");
             return;
         }
 
-        if (ConnectionExist(SelectedStar, star)) return;
+        if (SelectedStar == null || SelectedStar == star)
+        {
+            if (!star.HasMaxConnections())
+            {
+                SelectedStar = star;
+                starSelectedParticles.transform.position = star.transform.position;
+                starSelectedParticles.Play();
+                Debug.Log("Set Selected Star");
+            }
+            else
+            {
+                Debug.Log("Has max");
+            }
+            return;
+        }
+
+        if (SelectedStar.HasMaxConnections() || star.HasMaxConnections())
+        {
+            Debug.Log("Star has max connections");
+            return;
+        }
+
+        if (ConnectionExist(SelectedStar, star))
+        {
+            Debug.Log("Connection Exists between this stars already.");
+            return;
+        }
+
+        starSelectedParticles.transform.position = star.transform.position;
+        starSelectedParticles.Play();
 
         LineRenderer newLine = Instantiate(starLanePrefab);
 
@@ -131,7 +126,7 @@ public class GameManager : MonoBehaviour
             connection.StarA.connections.Remove(connection);
             connection.StarB.connections.Remove(connection);
 
-            Destroy(connection.lineConnect.gameObject);
+            if (connection.lineConnect != null) Destroy(connection.lineConnect.gameObject);
 
             for (int i = 0; i < Solution.Length; i++)
             {
@@ -168,5 +163,21 @@ public class GameManager : MonoBehaviour
 
         completionProgress = Mathf.Clamp((float)CorrectConnections.Count - ((float)WrongConnections.Count / 2), 0f, fullComplete);
         progressBar.fillAmount = completionProgress / fullComplete;
+
+        if (completionProgress == fullComplete)
+        {
+            Invoke("OnGameWon", 2f);
+        }
+    }
+
+    public void OnGameLost()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
+    }
+
+    public void OnGameWon()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }
