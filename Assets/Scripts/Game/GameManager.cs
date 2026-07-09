@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
             }
 
             completionProgress = Mathf.Clamp(CorrectConnections.Count - WrongConnections.Count, 0f, fullComplete);
-            progressBar.fillAmount = completionProgress / fullComplete;
+            if (progressBar != null) progressBar.fillAmount = completionProgress / fullComplete;
         }
     }
 
