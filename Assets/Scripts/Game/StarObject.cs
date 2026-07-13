@@ -9,6 +9,35 @@ public class StarObject : MonoBehaviour
 
     [SerializeField,Range(1f, 5f)] private int maxNumberOfConnections;
 
+    private MaterialPropertyBlock propertyBlock;
+
+    private MeshRenderer meshRenderer;
+
+    [Header("Mat Settings")]
+    [SerializeField, ColorUsage(true, true)] private Color neonColor;
+    [SerializeField, ColorUsage(true, true)] private Color emissionColor;
+    [SerializeField] private float pulseSpeed = 1f;
+    [SerializeField] private float glowStrength = 10f;
+    [SerializeField, ColorUsage(true, true)] private Color baseColor;
+
+    private void Awake()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+
+        propertyBlock = new MaterialPropertyBlock();
+    }
+
+    private void Start()
+    {
+        propertyBlock.SetColor("_NeonColor", neonColor);
+        propertyBlock.SetColor("_EmissionColor", emissionColor);
+        propertyBlock.SetFloat("_PulseSpeed", pulseSpeed);
+        propertyBlock.SetFloat("_GlowStrength", glowStrength);
+        propertyBlock.SetColor("_BaseColor", baseColor);
+
+        meshRenderer.SetPropertyBlock(propertyBlock);
+    }
+
     public void OnStarFirstSelection()
     {
         Debug.Log("Star Touched");

@@ -12,9 +12,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Star4 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4821581213258552063, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
+      propertyPath: instanceId
+      value: 24609a81-70f1-432c-b87e-9094fdd5e2ef
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175499590691798842, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
+      propertyPath: baseColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175499590691798842, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
+      propertyPath: baseColor.g
+      value: 0.6509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175499590691798842, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
+      propertyPath: baseColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175499590691798842, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
+      propertyPath: neonColor.b
+      value: 0.11764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175499590691798842, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
+      propertyPath: neonColor.r
+      value: 0.12156863
+      objectReference: {fileID: 0}
     - target: {fileID: 7175499590691798842, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
       propertyPath: maxNumberOfConnections
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888519848339147541, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
+      propertyPath: instanceId
+      value: ff3570ac-0754-4901-92f1-375bdd50aa7a
+      objectReference: {fileID: 0}
+    - target: {fileID: 8270121676597114698, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
+      propertyPath: instanceId
+      value: 87a8d543-0602-40de-8756-2230aaf189e9
       objectReference: {fileID: 0}
     - target: {fileID: 8665569882259361690, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 9022214238186107804, guid: abc8ea1013b66bc42b79fcd4d2e0d2d5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 184b3686c8325584cb8aefd599a932d5, type: 2}
+      objectReference: {fileID: 2100000, guid: cbf4d1212fe59e14a8523892b79b04da, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

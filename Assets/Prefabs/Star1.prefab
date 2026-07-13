@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 1dd64881-7dc6-4a10-89a4-d87048843cac
+  instanceId: 13d8914d-ac48-4376-bfec-a35096f083bc
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -257,7 +257,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc3724201ddf7e847b0b349b0106b6ab, type: 2}
+  - {fileID: 2100000, guid: cbf4d1212fe59e14a8523892b79b04da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -366,6 +366,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StarObject
   AnchorPoint: {fileID: 0}
   maxNumberOfConnections: 1
+  mat: {fileID: 0}
+  neonColor: {r: 0.2, g: 0, b: 0.19215687, a: 1}
+  emissionColor: {r: 0, g: 0.7490196, b: 0.45490196, a: 1}
+  pulseSpeed: 1
+  glowStrength: 10
+  baseColor: {r: 0.69803923, g: 0.050980393, b: 0, a: 1}
 --- !u!1 &3891627788644584384
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 5838e892-31a4-4f65-a415-dc108aefa14c
-  instanceId: 8e6cc71f-7117-4179-9953-6522f55593ce
+  instanceId: f0336187-5543-4eac-9fcf-b182764e363a
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: c88fc9f2-e9d1-41ea-b937-cdaf92a806d0
@@ -887,7 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: 3f1827c2-c682-46d8-999e-0954e37e833e
-  instanceId: 1a2479ba-60f9-412e-ba44-9ab904393913
+  instanceId: dac99a6f-e8fe-4184-912e-fa67f41f2bab
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 20b9ad69-c205-488d-a6b2-d3d7ca6c1e53
