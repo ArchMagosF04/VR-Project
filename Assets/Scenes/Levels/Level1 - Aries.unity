@@ -17392,7 +17392,7 @@ MonoBehaviour:
   - PointA: {fileID: 519801993}
     PointB: {fileID: 1170062495}
     Solved: 0
-  - PointA: {fileID: 519801993}
+  - PointA: {fileID: 1170062495}
     PointB: {fileID: 1055557343}
     Solved: 0
   - PointA: {fileID: 1055557343}
