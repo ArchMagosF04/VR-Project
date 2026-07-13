@@ -20,7 +20,6 @@ public class SnapInteractableEx : SnapInteractable
         if (!_snappedInteractors.Contains(interactor))
         {
             _snappedInteractors.Add(interactor);
-            Debug.Log($"Objeto snapeado por: {interactor.name}");
         }
 
         StarObject snapStar = interactor.GetComponentInParent<StarObject>();

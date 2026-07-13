@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MeshRenderer[] meshRenderers;
     [SerializeField] private Material starMaterial;
 
-    [SerializeField] private Canvas victoryCanvas;
-    [SerializeField] private Canvas defeatCanvas;
+    [SerializeField] private GameObject victoryCanvas;
+    [SerializeField] private GameObject defeatCanvas;
 
     [SerializeField] private CanvasGroup finalImage;
 
@@ -62,8 +62,8 @@ public class GameManager : MonoBehaviour
         completionProgress = 0f;
         progressBar.fillAmount = completionProgress / fullComplete;
 
-        if (victoryCanvas) victoryCanvas.enabled = false;
-        if (defeatCanvas) defeatCanvas.enabled = false;
+        if (victoryCanvas) victoryCanvas.SetActive(false);
+        if (defeatCanvas) defeatCanvas.SetActive(false);
     }
 
     private void OnDisable()
@@ -217,7 +217,7 @@ public class GameManager : MonoBehaviour
 
         starMaterial.SetFloat("_StarNumber", 0);
 
-        defeatCanvas.enabled = true;
+        defeatCanvas.SetActive(true);
     }
 
     public void OnGameWon()
@@ -241,7 +241,7 @@ public class GameManager : MonoBehaviour
             if (connection.lineConnect != null) connection.lineConnect.enabled = false;
         }
 
-        constelationObject.DOLocalMoveX(2f, 5f).SetEase(Ease.OutQuad).OnComplete(() => victoryCanvas.enabled = true);
+        constelationObject.DOLocalMoveX(2f, 5f).SetEase(Ease.OutQuad).OnComplete(() => victoryCanvas.SetActive(true));
     }
 
     public void ReloadLevel()

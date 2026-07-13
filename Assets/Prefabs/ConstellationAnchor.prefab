@@ -53,6 +53,7 @@ MonoBehaviour:
   _movementProvider: {fileID: 0}
   _snappedInteractors: []
   anchor: {fileID: 0}
+  snapParticle: {fileID: 0}
 --- !u!1 &6035715085425233039
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +83,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6035715085425233039}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.585, y: 1.779, z: -4.4673004}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_ConstrainProportionsScale: 1

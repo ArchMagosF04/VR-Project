@@ -32,6 +32,7 @@ public class BlackHole : MonoBehaviour
     public void StopBlackhole()
     {
         if (moveTween != null) moveTween.Kill(false);
+        explosionParticle.transform.SetParent(null);
     }
 
     [ContextMenu("ExplosionTest")]
