@@ -5069,11 +5069,26 @@ MonoBehaviour:
   destination: {fileID: 0}
   holeVisual: {fileID: 3061729208131547556}
   destinationWorldSpace: {x: 0, y: 0, z: 45}
-  timeToReach: 120
+  timeToReach: 240
   complementaryParticles:
   - {fileID: 8702480065695699471}
   - {fileID: 5675610247540861751}
   explosionParticle: {fileID: 3301107783951195923}
+  OnParticleExplosion:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3301107783951195923}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6693139048187130616
 GameObject:
   m_ObjectHideFlags: 0

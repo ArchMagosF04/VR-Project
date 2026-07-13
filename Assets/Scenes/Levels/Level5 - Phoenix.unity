@@ -8216,10 +8216,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackHoleSun
       objectReference: {fileID: 0}
-    - target: {fileID: 5222006237887411782, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
-      propertyPath: timeToReach
-      value: 240
-      objectReference: {fileID: 0}
     - target: {fileID: 6714143818844025839, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

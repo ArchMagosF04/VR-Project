@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BlackHole : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class BlackHole : MonoBehaviour
     [SerializeField] private ParticleSystem[] complementaryParticles;
 
     [SerializeField] private ParticleSystem explosionParticle;
+
+    public UnityEvent OnParticleExplosion;
 
     private Tween moveTween;
 
@@ -44,7 +47,7 @@ public class BlackHole : MonoBehaviour
             particle.gameObject.SetActive(false);
         }
 
-        holeVisual.DOScale(0, 3).SetEase(Ease.InBack).OnComplete(()=> explosionParticle.Play());
+        holeVisual.DOScale(0, 3).SetEase(Ease.InBack).OnComplete(()=> OnParticleExplosion?.Invoke());
     }
 
     public void HideBlackhole()
