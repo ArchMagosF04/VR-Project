@@ -8333,7 +8333,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867735513}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -11254,26 +11254,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1842544066}
     m_Modifications:
-    - target: {fileID: 6205874495992737928, guid: 8ffabbf21c7ce4642aa17ac4e67a61f0, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205874495992737928, guid: 8ffabbf21c7ce4642aa17ac4e67a61f0, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.88762283
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205874495992737928, guid: 8ffabbf21c7ce4642aa17ac4e67a61f0, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205874495992737928, guid: 8ffabbf21c7ce4642aa17ac4e67a61f0, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime0
-      value: 49140
-      objectReference: {fileID: 0}
-    - target: {fileID: 6205874495992737928, guid: 8ffabbf21c7ce4642aa17ac4e67a61f0, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8023276017136767355, guid: 8ffabbf21c7ce4642aa17ac4e67a61f0, type: 3}
       propertyPath: m_Name
       value: StarSelectedEffect
@@ -18465,15 +18445,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372323611310705330, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9204026
+      value: 0.99514186
       objectReference: {fileID: 0}
     - target: {fileID: 5372323611310705330, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.39097202
+      value: -0.09845133
       objectReference: {fileID: 0}
     - target: {fileID: 5372323611310705330, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -46.03
+      value: -11.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991220205132659293, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.55484444
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991220205132659293, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.8319541
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991220205132659293, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -112.6
       objectReference: {fileID: 0}
     - target: {fileID: 6714143818844025839, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18489,11 +18481,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714143818844025839, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9914449
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6714143818844025839, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.13052624
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6714143818844025839, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalRotation.y
@@ -18505,7 +18497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6714143818844025839, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6714143818844025839, guid: 4c0f6538a423b5e46b8823ed9ca31feb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

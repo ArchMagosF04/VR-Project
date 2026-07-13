@@ -2703,7 +2703,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 5c987874390203849937932738a51864, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5629,8 +5629,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f684184d171a85499b245a9d686902b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FPSDisplay
-  avgFrameRate: 0
   displayText: {fileID: 601461411}
+  updateInterval: 0.5
 --- !u!114 &601461411
 MonoBehaviour:
   m_ObjectHideFlags: 0
