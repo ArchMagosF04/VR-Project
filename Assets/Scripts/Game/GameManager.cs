@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,6 +26,20 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private string nextScene;
 
+    [SerializeField] private BlackHole blackHole;
+
+    [SerializeField] private GameObject[] objectsToAllwaysDisable;
+    [SerializeField] private GameObject[] objectsToDisableOnDefeat;
+    [SerializeField] private MeshRenderer[] meshRenderers;
+    [SerializeField] private Material starMaterial;
+
+    [SerializeField] private Canvas victoryCanvas;
+    [SerializeField] private Canvas defeatCanvas;
+
+    [SerializeField] private CanvasGroup finalImage;
+
+    [SerializeField] private Transform constelationObject;
+
     private void Awake()
     {
         if (Instance == null)
@@ -40,9 +55,25 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        finalImage.alpha = 0f;
+        starMaterial.SetFloat("_StarNumber", 100);
+
         fullComplete = Solution.Length;
         completionProgress = 0f;
         progressBar.fillAmount = completionProgress / fullComplete;
+
+        if (victoryCanvas) victoryCanvas.enabled = false;
+        if (defeatCanvas) defeatCanvas.enabled = false;
+    }
+
+    private void OnDisable()
+    {
+        starMaterial.SetFloat("_StarNumber", 100);
+    }
+
+    private void OnDestroy()
+    {
+        starMaterial.SetFloat("_StarNumber", 100);
     }
 
     public void SelectStar(StarObject star)
@@ -84,7 +115,7 @@ public class GameManager : MonoBehaviour
         starSelectedParticles.transform.position = star.transform.position;
         starSelectedParticles.Play();
 
-        LineRenderer newLine = Instantiate(starLanePrefab);
+        LineRenderer newLine = Instantiate(starLanePrefab, constelationObject);
 
         newLine.SetPosition(0, SelectedStar.transform.position);
         newLine.SetPosition(1, star.transform.position);
@@ -172,12 +203,60 @@ public class GameManager : MonoBehaviour
 
     public void OnGameLost()
     {
-        string currentScene = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentScene);
+        blackHole.HideBlackhole();
+
+        foreach (GameObject obj in objectsToDisableOnDefeat)
+        {
+            obj.SetActive(false);
+        }
+
+        foreach (MeshRenderer mesh in meshRenderers)
+        {
+            mesh.enabled = false;
+        }
+
+        starMaterial.SetFloat("_StarNumber", 0);
+
+        defeatCanvas.enabled = true;
     }
 
     public void OnGameWon()
     {
+        blackHole.StopBlackHole();
+
+        finalImage.DOFade(1, 1f).OnComplete(WinSequence);
+
+        foreach (GameObject obj in objectsToAllwaysDisable)
+        {
+            obj.SetActive(false);
+        }
+    }
+
+    private void WinSequence()
+    {
+        blackHole.DestroyBlackHole();
+
+        foreach (StarConnection connection in CurrentConnections)
+        {
+            if (connection.lineConnect != null) connection.lineConnect.enabled = false;
+        }
+
+        constelationObject.DOLocalMoveX(2f, 5f).SetEase(Ease.OutQuad).OnComplete(() => victoryCanvas.enabled = true);
+    }
+
+    public void ReloadLevel()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
+    }
+
+    public void GoToNextLevel()
+    {
         SceneManager.LoadScene(nextScene);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
